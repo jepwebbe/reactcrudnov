@@ -31,15 +31,16 @@
     height: 2rem;
     transform: rotate(45deg);
     background-color: white;
-    
+
 }
+
 @mixin externalNav {
     display: grid;
     place-items: center;
     list-style: none;
 
     li {
-        padding-right: 0.5em;
+        padding-right: 0.5rem;
         text-align: center;
 
         a {

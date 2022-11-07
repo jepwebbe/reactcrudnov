@@ -28,7 +28,7 @@ export const GoalList = () => {
     return (
         <>
         <button onClick={() => navigate(-1)}>Tilbage til hjem</button>
-        <Page title="Produkter" description="Se vores skønne produkter">
+        <Page title="Verdensmål" description="Se vores skønne produkter">
             <ul>
                 {apiData ?
                 apiData.map((goal) => (

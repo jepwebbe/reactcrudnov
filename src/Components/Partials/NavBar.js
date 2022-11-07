@@ -24,7 +24,7 @@ function NavBar() {
                 <ul className="InternalNav" 
                 style={{ 
                     display: isDisplay ? 'none' : 'flex' }}>
-                    <li className="NavLi" ><NavLink activeClassName="active" to="/">Hjem</NavLink></li>
+                    <li className="NavLi" ><NavLink activeclassname="active" to="/">Hjem</NavLink></li>
                     <li className="NavLi" ><NavLink to="/web">Web</NavLink></li>
                     <li className="Dropdown NavLi"><NavLink to="/tekster">Tekster</NavLink>
                         <ul className="DropdownContent">
