@@ -1,0 +1,22 @@
+.goalItem {
+    width: 40rem;
+    margin: 0 auto;
+    .headWrap {
+        display: flex;
+        img {
+            padding-right: 1rem;
+        }
+    }
+    h2 {
+        text-align: center;
+    }
+    img {
+        max-width: 100%;
+    }
+    .icon {
+        width: 2rem;
+    }
+    p {
+        text-align: justify;
+    }
+}

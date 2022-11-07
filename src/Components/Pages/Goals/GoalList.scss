@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: lower-greek;
+    width: 80rem;
+    margin: 0 auto;
+    a {
+        color: black;
+    }
+}
