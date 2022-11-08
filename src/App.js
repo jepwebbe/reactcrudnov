@@ -4,7 +4,8 @@ import { Main } from './Components/Partials/Main';
 
 import "./Assets/app.scss"
 import FlashMessages from "./Components/FlashMessages/FlashMessages";
-function App() {
+
+const App = () => {
   return (
     <>
       <NavBar />
