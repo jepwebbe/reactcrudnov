@@ -1,12 +1,11 @@
 export default function authHeader() {
-    const currentToken = sessionStorage.getItem("token") ?
-    JSON.parse(sessionStorage.getItem("token")) :
+    const currentToken = localStorage.getItem("token") ?
+    JSON.parse(localStorage.getItem("token")) :
     "";
-
-    if (currentToken && currentToken) {
+    if (currentToken && currentToken.state.access_token) {
         return {
             "Access-ControlAllow-Origin": "*",
-            authorization: `Bearer ${currentToken.access_token}`
+            authorization: `Bearer ${currentToken.state.access_token}`
         };
     } else {
         return {};

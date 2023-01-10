@@ -1,6 +1,6 @@
 import create from "zustand"
 
-export const useLoginStore = create((set) => {
+const useLoginStore = create((set) => {
     return {
         loggedIn: false,
         username: "",

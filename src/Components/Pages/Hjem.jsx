@@ -4,7 +4,7 @@ import { Page } from "../App/Layout/Page";
 import { useFlashMessageStore2 } from "../FlashMessages/Flash2/useFlashMessageStore2";
 import { useModalStore } from "../Modal/useModalStore";
 import "./hjem.scss";
-import Login from "./Login/Login";
+import LoginPage from "./LoginPage";
 
 export const Hjem = () => {
   const { setModalPayload } = useModalStore();
@@ -16,7 +16,7 @@ export const Hjem = () => {
       <button onClick={() => setModalPayload("jeg er en tekstmodal")}>
         Modal med tekst
       </button>
-      <button onClick={() => setModalPayload(<Login />)}>Login</button>
+      <button onClick={() => setModalPayload(<LoginPage />)}>Login</button>
       <button onClick={() => setFlashMessage("Ild i piben")}>Flash me mofo</button>
     </Page>
   );

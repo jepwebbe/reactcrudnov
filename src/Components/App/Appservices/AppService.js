@@ -3,26 +3,28 @@ import axios from "axios";
 import API_URL from "./API_URL";
 import authHeader from "./auth-header";
 
+const BASEURL = "bakeonline"
+
 const GetList = (e) => {
     return axios.get(`${API_URL}/${e}`, {
         headers: authHeader()
     })
 }
 
-const GetDetails = (e, id) => {
-    return axios.get(`${API_URL}/${e}/${id}`, {
+const Get = (e, id) => {
+    return axios.get(`${API_URL}/${BASEURL}/${e}/${id}`, {
         headers: authHeader(),
     })
 }
 
 const Create = (e, data) => {
-    return axios.post(`${API_URL}/${e}`, data, {
+    return axios.post(`${API_URL}/${BASEURL}/${e}`, data, {
         headers: authHeader(),
     })
 }
 
 const Login = async (username, password) => {
-    return await axios.post(`https://api.mediehuset.net/token`, { username, password})
+    return await axios.post(`${API_URL}/token`, { username, password})
 }
 
 const Update = (e, id, data) => {
@@ -32,12 +34,12 @@ const Update = (e, id, data) => {
 }
 
 const Remove = (e, id) => {
-    return axios.put(`${API_URL}/${e}/${id}`, {
+    return axios.get(`${API_URL}/${BASEURL}/${e}/${id}`, {
         headers: authHeader(),
     })
 }
 
 const appService = {
-    GetList, GetDetails, Create, Remove, Login, Update,
+    GetList, Get, Create, Remove, Login, Update,
 }
 export default appService;

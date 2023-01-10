@@ -4,15 +4,24 @@ import { Main } from './Components/Partials/Main';
 
 import "./Assets/app.scss"
 import FlashMessages from "./Components/FlashMessages/FlashMessages";
-
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./Styles/Global";
+const theme = {
+  background: "beige",
+  onBackground: "brown",
+  devMode: true 
+}
 const App = () => {
   return (
     <>
-      <NavBar />
-      <Main>
-        <FlashMessages />
-        <Router />
-      </Main>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <NavBar />
+        <Main>
+          <FlashMessages />
+          <Router />
+        </Main>
+      </ThemeProvider>
     </>
   )
 }

@@ -3,10 +3,10 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.scss";
 import Logo from "../../Assets/Images/Copyleft.svg";
-import Login from "../Pages/Login/Login"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import LoginPage from "../Pages/LoginPage";
 
 
 function NavBar() {
@@ -33,7 +33,7 @@ function NavBar() {
                         </ul>
                     </li>
                     <li className="NavLi"><NavLink to="/om">Om</NavLink></li>
-                    <li className="NavLi"><NavLink to="/login" element={<Login/>}>Login</NavLink></li>
+                    <li className="NavLi"><NavLink to="/login" element={<LoginPage/>}>Login</NavLink></li>
 
                 </ul>
                 <ul className="ExternalNav">
